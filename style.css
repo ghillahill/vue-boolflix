@@ -94,10 +94,8 @@ header {
     color: #212529;
 }
 
-.movie-language {
-    font-size: 15px;
-    color: #495057;
-    text-transform: uppercase;
+.movie-language img {
+    max-width: 25px;
 }
 
 .movie-vote {

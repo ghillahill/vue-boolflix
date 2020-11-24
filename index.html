@@ -29,12 +29,13 @@
                         <img :src="baseUrl + 'w185' + movie.poster_path">
                         <p class="movie-title">{{movie.title}}</p>
                         <p class="movie-original-title">{{movie.original_title}}</p>
-                        <p class="movie-language">{{movie.original_language}}</p>
+                        <div class="movie-language">
+                            <img :src="'flags/' + movie.original_language + '.png'" :alt="movie.original_language">
+                        </div>
                         <div class="movie-vote">
                             <i class="fas fa-star" v-for="star in getVote(movie.vote_average)"></i>
                             <i class="far fa-star" v-for="star in (5 - getVote(movie.vote_average))"></i>
                         </div>
-
                     </div>
                 </section>
             </div>

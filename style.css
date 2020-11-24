@@ -57,7 +57,7 @@ header {
     flex-wrap: wrap;
     width: 100%;
     padding: 0 100px;
-    height: calc(100vh - 150px);
+    height: calc(100% - 150px);
     background-color: #343a40;
 }
 
@@ -66,8 +66,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 320px;
-    height: 200px;
+    width: 400px;
+    height: 250px;
     margin: 20px;
     padding: 20px;
     background-color: #adb5bd;
@@ -79,7 +79,7 @@ header {
 }
 
 .box img {
-    max-width: 100px;
+    max-width: 80px;
     border-radius: 10px;
 }
 
@@ -90,8 +90,7 @@ header {
 }
 
 .movie-original-title {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 14px;
     color: #212529;
 }
 

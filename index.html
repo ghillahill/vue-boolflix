@@ -5,6 +5,7 @@
         <title>BoolFlix</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d573fb9cae.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <link rel="stylesheet" href="style.css">
@@ -20,15 +21,17 @@
 
             <div class="wrapper">
                 <div class="menu-select">
-
+                    <input placeholder="Look for a movie" v-model="search">
+                    <button @click="getSearch">Search</button>
                 </div>
                 <section class="main">
-                    <div class="box">
-                        <img src="">
-                        <p class="movie-title"></p>
-                        <p class="movie-original-title"></p>
-                        <p class="movie-language"></p>
-                        <p class="movie-vote"></p>
+                    <div class="box" v-for="movie in catalog" v-if="checker">
+                        <img :src="baseUrl + 'w185' + movie.poster_path">
+                        <p class="movie-title">{{movie.title}}</p>
+                        <p class="movie-original-title">{{movie.original_title}}</p>
+                        <p class="movie-language">{{movie.original_language}}</p>
+                        <!--                          <p class="movie-vote">{{}}</p>                         -->
+
                     </div>
                 </section>
             </div>

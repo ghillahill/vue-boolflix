@@ -26,6 +26,9 @@ var app = new Vue({
                 this.catalog = [];
                 this.checker = false;
             }
+        },
+        getVote(vote_average) {
+            return Math.round((vote_average * 5) / 10);
         }
     },
     mounted() {

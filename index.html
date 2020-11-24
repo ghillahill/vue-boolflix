@@ -30,7 +30,10 @@
                         <p class="movie-title">{{movie.title}}</p>
                         <p class="movie-original-title">{{movie.original_title}}</p>
                         <p class="movie-language">{{movie.original_language}}</p>
-                        <!--                          <p class="movie-vote">{{}}</p>                         -->
+                        <div class="movie-vote">
+                            <i class="fas fa-star" v-for="star in getVote(movie.vote_average)"></i>
+                            <i class="far fa-star" v-for="star in (5 - getVote(movie.vote_average))"></i>
+                        </div>
 
                     </div>
                 </section>

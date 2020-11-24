@@ -101,6 +101,8 @@ header {
 }
 
 .movie-vote {
+    display: flex;
+    justify-content: space-between;
     font-size: 15px;
     color: #495057;
     text-transform: uppercase;

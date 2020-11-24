@@ -21,7 +21,7 @@
 
             <div class="wrapper">
                 <div class="menu-select">
-                    <input placeholder="Look for a movie" v-model="search">
+                    <input placeholder="Look for a movie" v-model="search" @keyup.enter="getSearch">
                     <button @click="getSearch">Search</button>
                 </div>
                 <section class="main">

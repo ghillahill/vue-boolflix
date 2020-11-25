@@ -18,7 +18,7 @@ var app = new Vue({
                             language: 'it'
                         }
                     }).then((response) => {
-                        this.catalog = response.data.results;
+                        this.allMedia = response.data.results;
                         //reset dell'input search
                         this.search = '';
                     });

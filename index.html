@@ -25,16 +25,16 @@
                     <button @click="getSearch">Search</button>
                 </div>
                 <section class="main">
-                    <div class="box" v-for="movie in catalog" v-if="checker">
-                        <img :src="baseUrl + 'w185' + movie.poster_path">
-                        <p class="movie-title">{{movie.title}}</p>
-                        <p class="movie-original-title">{{movie.original_title}}</p>
+                    <div class="box" v-for="media in allMedia">
+                        <img :src="baseUrl + 'w185' + media.poster_path">
+                        <p class="movie-title">{{media.title ? media.title : media.name}}</p>
+                        <p class="movie-original-title">{{media.original_title ? media.original_title : media.original_name}}</p>
                         <div class="movie-language">
-                            <img :src="'flags/' + movie.original_language + '.png'" :alt="movie.original_language">
+                            <img :src="'flags/' + media.original_language + '.png'" :alt="media.original_language">
                         </div>
                         <div class="movie-vote">
-                            <i class="fas fa-star" v-for="star in getVote(movie.vote_average)"></i>
-                            <i class="far fa-star" v-for="star in (5 - getVote(movie.vote_average))"></i>
+                            <i class="fas fa-star" v-for="star in getVote(media.vote_average)"></i>
+                            <i class="far fa-star" v-for="star in (5 - getVote(media.vote_average))"></i>
                         </div>
                     </div>
                 </section>

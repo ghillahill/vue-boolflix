@@ -8,6 +8,7 @@ var app = new Vue({
     },
     methods: {
         getSearch() {
+            if (this.search != '') {
                 axios
                     .get('https://api.themoviedb.org/3/search/movie', {
                         params: {
@@ -21,6 +22,10 @@ var app = new Vue({
                         //reset dell'input search
                         this.search = '';
                     });
+            } else {
+                this.catalog = [];
+                this.checker = false;
+            }
         },
         getVote(vote_average) {
             return Math.round((vote_average * 5) / 10);

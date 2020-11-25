@@ -19,10 +19,11 @@ body {
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     height: 80px;
-    background-color: lightgrey;
+    padding: 10px 100px;
+    background-color: black;
 }
 
 .main-title {
@@ -32,6 +33,7 @@ header {
 
 .main-title h1 {
     text-transform: uppercase;
+    color: red;
 }
 
 .wrapper {
@@ -39,15 +41,25 @@ header {
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    min-height: 100vh;
+    background-color: #343a40;
 }
 
 .menu-select {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 150px;
-    background-color: #dee2e6;
+}
+
+.menu-select input {
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.menu-select button {
+    padding: 15px;
+    background-color: red;
+    color: black;
 }
 
 .main {
@@ -57,8 +69,6 @@ header {
     flex-wrap: wrap;
     width: 100%;
     padding: 0 100px;
-    height: calc(100% - 150px);
-    background-color: #343a40;
 }
 
 .box {

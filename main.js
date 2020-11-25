@@ -31,9 +31,8 @@ var app = new Vue({
                         }
                     })
                     .then((response) => {
-                        // Assegno al risultato dell'api all'array serie
                         this.tvShow = response.data.results;
-                        // Assegno ad uno nuovo array il risultato dei due array film e serie
+                        //Concateno array movies con array tvShow
                         this.allMedia = this.movies.concat(this.tvShow);
                         //reset dell'input search
                         this.search = '';

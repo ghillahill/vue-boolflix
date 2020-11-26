@@ -27,16 +27,27 @@
 
                 <section class="main">
                     <div class="box" v-for="media in allMedia">
-                        <img :src="baseUrl + 'w185' + media.poster_path">
-                        <p class="movie-title">{{media.title ? media.title : media.name}}</p>
-                        <p class="movie-original-title">{{media.original_title ? media.original_title : media.original_name}}</p>
-                        <div class="movie-language">
-                            <img :src="'flags/' + media.original_language + '.png'" :alt="media.original_language">
+                        <img class="poster-image" :src="baseUrl + 'w342' + media.poster_path">
+                        <div class="media-info">
+                            <p class="movie-title">
+                                <span>Title: </span>
+                                {{media.title ? media.title : media.name}}
+                            </p>
+                            <p class="movie-original-title">
+                                <span>Original Title: </span>
+                                {{media.original_title ? media.original_title : media.original_name}}
+                            </p>
+                            <div class="movie-language">
+                                <span>Language</span>
+                                <img :src="'flags/' + media.original_language + '.png'" :alt="media.original_language">
+                            </div>
+                            <div class="movie-vote">
+                                <span>Vote</span>
+                                <i class="fas fa-star" v-for="star in getVote(media.vote_average)"></i>
+                                <i class="far fa-star" v-for="star in (5 - getVote(media.vote_average))"></i>
+                            </div>
                         </div>
-                        <div class="movie-vote">
-                            <i class="fas fa-star" v-for="star in getVote(media.vote_average)"></i>
-                            <i class="far fa-star" v-for="star in (5 - getVote(media.vote_average))"></i>
-                        </div>
+
                     </div>
                 </section>
             </div>

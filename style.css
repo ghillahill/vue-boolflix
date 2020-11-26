@@ -41,7 +41,7 @@ header {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: #343a40;
 }
 
@@ -74,43 +74,76 @@ header {
 .box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 250px;
+    justify-content: flex-start;
+    position: relative;
+    max-width: 342px;
+    max-height: 488px;
     margin: 20px;
     background-color: #adb5bd;
 }
 
 .box:hover {
-    background-color: #ced4da;
+    background-color: #282828;
     cursor: pointer;
 }
 
-.box img {
-    max-width: 80px;
-    border-radius: 10px;
+.poster-image {
+    width: 342px;
+    height: 488px;
+}
+
+.box:hover .poster-image {
+    visibility: hidden;
+}
+
+.media-info {
+    position: absolute;
+    width: 342px;
+    height: 488px;
+    padding: 50px;
+    opacity: 0;
+}
+
+.media-info:hover {
+    opacity: 1;
 }
 
 .movie-title {
+    padding: 10px 0;
     font-size: 18px;
     font-weight: bold;
-    color: #212529;
+    color: lightgrey;
 }
 
 .movie-original-title {
-    font-size: 14px;
-    color: #212529;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: lightgrey;
+}
+
+.movie-language {
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: lightgrey;
 }
 
 .movie-language img {
+    vertical-align: middle;
     max-width: 25px;
 }
 
 .movie-vote {
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     font-size: 15px;
-    color: #495057;
+    color: lightgrey;
     text-transform: uppercase;
+}
+
+/*-------------------------------------*/
+.fas, .far {
+    color: yellow;
 }

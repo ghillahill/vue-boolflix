@@ -26,6 +26,11 @@ header {
     background-color: black;
 }
 
+span {
+    font-size: 18px;
+    color: grey;
+}
+
 .main-title {
     display: flex;
     align-items: center;
@@ -103,29 +108,16 @@ header {
     padding: 50px;
     opacity: 0;
     border: 2px solid white;
+    overflow-y: auto;
 }
 
 .media-info:hover {
     opacity: 1;
 }
 
-.movie-title {
+.movie-title, .movie-original-title, .movie-language, .movie-vote , .movie-overview {
     padding: 10px 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: lightgrey;
-}
-
-.movie-original-title {
-    padding: 10px 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: lightgrey;
-}
-
-.movie-language {
-    padding: 10px 0;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     color: lightgrey;
 }
@@ -136,7 +128,6 @@ header {
 }
 
 .movie-vote {
-    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     font-size: 15px;

@@ -46,6 +46,10 @@
                                 <i class="fas fa-star" v-for="star in getVote(media.vote_average)"></i>
                                 <i class="far fa-star" v-for="star in (5 - getVote(media.vote_average))"></i>
                             </div>
+                            <div class="movie-overview">
+                                <span>Overview: </span>
+                                {{media.overview}}
+                            </div>
                         </div>
 
                     </div>

@@ -102,6 +102,7 @@ header {
     height: 488px;
     padding: 50px;
     opacity: 0;
+    border: 2px solid white;
 }
 
 .media-info:hover {

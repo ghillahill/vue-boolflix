@@ -38,11 +38,11 @@
                                 {{media.original_title ? media.original_title : media.original_name}}
                             </p>
                             <div class="movie-language">
-                                <span>Language</span>
+                                <span>Language: </span>
                                 <img :src="'flags/' + media.original_language + '.png'" :alt="media.original_language">
                             </div>
                             <div class="movie-vote">
-                                <span>Vote</span>
+                                <span>Vote: </span>
                                 <i class="fas fa-star" v-for="star in getVote(media.vote_average)"></i>
                                 <i class="far fa-star" v-for="star in (5 - getVote(media.vote_average))"></i>
                             </div>

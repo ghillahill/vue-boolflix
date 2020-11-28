@@ -1,9 +1,9 @@
+const url_base = "https://api.themoviedb.org/3"
+
 var app = new Vue({
     el: '#root',
     data: {
         search : '',
-        movies : [],
-        tvShow: [],
         allMedia: [],
         baseUrl : ''
     },
@@ -11,7 +11,7 @@ var app = new Vue({
         getSearch() {
             if (this.search != '') {
                 axios
-                    .get('https://api.themoviedb.org/3/search/movie', {
+                    .get(url_base + '/search/movie', {
                         params: {
                             api_key: 'ada6c56530afc32ccfe291574cf9f8fa',
                             query: this.search,
@@ -23,7 +23,7 @@ var app = new Vue({
                         this.search = '';
                     });
                 axios
-                    .get('https://api.themoviedb.org/3/search/tv', {
+                    .get(url_base + '/search/tv', {
                         params:{
                             api_key: 'ada6c56530afc32ccfe291574cf9f8fa',
                             query: this.search,
